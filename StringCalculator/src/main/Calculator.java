@@ -9,9 +9,14 @@ public class Calculator {
 		}
 		else if(numbers.length==1)
 		{
-			return(Integer.parseInt(numbers[0]));
+			return(stringToInt(numbers[0]));
 		}
+
 		return 0;
+	}
+
+	private Integer stringToInt(String string) {
+		return(Integer.parseInt(string));
 	}
 
 }
