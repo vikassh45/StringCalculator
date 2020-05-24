@@ -31,5 +31,19 @@ class TestCalculator {
 		Calculator calculator=new Calculator();
 		assertEquals(calculator.calculate("5\n6"),11);
 	}
+	@Test
+	void threeValuesReturnsSumWithAnyDelimiter() throws Exception
+	{
+		Calculator calculator=new Calculator();
+		assertEquals(calculator.calculate("5\n4,6"),15);
+		
+	}
+	@Test
+	void numbersGreaterThanThousandIgnored() throws Exception
+	{
+		Calculator calculator=new Calculator();
+		assertEquals(calculator.calculate("2000\n4,6"),10);
+		
+	}
 	
 }

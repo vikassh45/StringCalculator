@@ -11,12 +11,10 @@ public class Calculator {
 		{
 			return(stringToInt(numbers[0]));
 		}
-		else if(numbers.length==2)
+		else
 		{
 			return(getSum(numbers));
 		}
-
-		return 0;
 	}
 
 	private Integer getSum(String[] numbers) throws Exception {
@@ -31,6 +29,10 @@ public class Calculator {
 	}
 	
 	private Integer stringToInt(String string) {
+		if(Integer.parseInt(string)>1000)
+		{
+			string="0";
+		}
 		return(Integer.parseInt(string));
 	}
 
