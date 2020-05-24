@@ -19,5 +19,17 @@ class TestCalculator {
 		Calculator calculator=new Calculator();
 		assertEquals(calculator.calculate("5"),5);
 	}
-
+	@Test
+	void twoValuesReturnsSumWithComma() throws Exception
+	{
+		Calculator calculator=new Calculator();
+		assertEquals(calculator.calculate("5,6"),11);
+	}
+	@Test
+	void twoValuesReturnsSumWithNewLine() throws Exception
+	{
+		Calculator calculator=new Calculator();
+		assertEquals(calculator.calculate("5\n6"),11);
+	}
+	
 }

@@ -11,6 +11,10 @@ public class Calculator {
 		{
 			return(stringToInt(numbers[0]));
 		}
+		else if(numbers.length==2)
+		{
+			return(stringToInt(numbers[0])+stringToInt(numbers[1]));
+		}
 
 		return 0;
 	}
