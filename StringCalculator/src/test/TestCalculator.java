@@ -45,5 +45,11 @@ class TestCalculator {
 		assertEquals(calculator.calculate("2000\n4,6"),10);
 		
 	}
-	
+	@Test
+	void negativeNumberException() throws Exception
+	{
+		Calculator calculator=new Calculator();
+		calculator.calculate("-5");
+		
+	}
 }

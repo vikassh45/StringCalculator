@@ -4,13 +4,14 @@ public class Calculator {
 
 	public Integer calculate(String input) throws Exception {
 		String[] numbers=input.split(",|\n");
-		if(numbers[0]=="") {
+		if(numbers[0]=="")
 			return 0;
-		}
+
 		else if(numbers.length==1)
 		{
 			return(stringToInt(numbers[0]));
 		}
+
 		else
 		{
 			return(getSum(numbers));
@@ -23,11 +24,9 @@ public class Calculator {
 		{
 			stringToInt(s);
 			sum=sum+stringToInt(s);
-			
 		}
 		return sum;
 	}
-	
 	private Integer stringToInt(String string) {
 		if(Integer.parseInt(string)>1000)
 		{
